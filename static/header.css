@@ -1,0 +1,104 @@
+
+
+body {
+    margin: 0px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.flash-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.heading {
+    color: white;
+    font-family: "DejaVu Serif", serif;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1px;
+    margin-left: 80px;
+}
+
+.thunder {
+    font-size: 45px;
+    margin-right: 10px;
+    margin-top: -25px;
+}
+
+.input {
+    padding: 10px;
+    width: 240px;
+    margin-right: 8px;
+    border-style: none;
+    border-width: 0px;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+
+.butt {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.result-container {
+    padding: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Change from "row" to "column" */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+}
+.result-heading {
+    font-family: "Roboto";
+    font-size: 30px;
+    text-align: center;
+}
+
+.status-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.site-container {
+    padding: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gold;
+    border-radius: 7px;
+    margin: 20px;
+    width: 120px;
+}
+.site {
+    font-family: "Roboto";
+    font-size: 20px;
+}
+.state {
+    font-family: "Roboto";
+    font-size: 15px;
+    color: darkgray;
+}
+.available {
+    background-color: rgba(255, 215, 0, 0.1) ;
+}
+.taken {
+    text-decoration: line-through;
+}

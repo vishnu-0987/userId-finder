@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username Checker</title>
+    <link rel="stylesheet" href="../static/header.css">
+    <script src="https://kit.fontawesome.com/2cd236b43a.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <div class="flash-heading">
+                <img src="../static/usericon.png" class="thunder"/>
+                <h1 class="heading">USER ID FINDER</h1>
+            </div>
+
+            <div class="form-container">
+                <form method="post" action="/">
+                    <input type="search" id="username" name="username" class="input" placeholder="please enter a name" required>
+                    <button type="submit" class="butt">Check</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="result-container">
+        {% if results %}
+            <h2 class="result-heading">Results for {{ username }}</h2>
+            <div class="status-container">
+                    {% for site, result in results.items() %}
+                        <div class="site-container {% if not result %}available{% endif %}">
+                            <h1 class="site {% if result %}taken{% endif %}">{{ site }}</h1>
+                            <p class="state">{% if result %} Taken {% else %} Available {% endif %}</p>
+                        </div>
+                    {% endfor %}
+            </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

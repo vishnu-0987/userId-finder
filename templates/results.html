@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username Checker Results</title>
+</head>
+<body>
+    <h1>Results for {{ username }}</h1>
+    <ul>
+        {% for site, present in results.items() %}
+            <li>
+                {% if present == True %}
+                    {{ username }} is present on {{ site }}
+                {% elif present == False %}
+                    {{ username }} is NOT present on {{ site }}
+                {% else %}
+                    Unable to check {{ username }} on {{ site }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
